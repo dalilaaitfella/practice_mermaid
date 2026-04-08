@@ -1,34 +1,32 @@
-1) Introduction: 
+# Software Design Document (SDD)
 
--Purpose:
-This document explains how the Dungeon advenuture Game works and how it designed.
+## 1) Introduction
 
--Scope:
+**Purpose:**  
+This document explains how the Dungeon Adventure Game works and how it is designed.
 
-     .texted-based Dangeon Game.
-     .Player moves through 5 levels stored in a linked list.
-     .Players fight enemies using stack and Queue.
-     .Supports a party of player controlled characters.
+**Scope:**  
+- Text-based Dungeon Game  
+- Player moves through 5 levels stored in a linked list  
+- Players fight enemies using stack and queue  
+- Supports a party of player-controlled characters  
 
-2) System Overview:
- 
- - Design Aproach
-     
-     . Levels stored in linked list.
-     . Enemies in each level stored in a stack.
-     .Players turns managed usin a Queue.
+---
 
-     System diagram :
+## 2) System Overview
 
+**Design Approach:**  
+- Levels are stored in a linked list  
+- Enemies in each level are stored in a stack  
+- Player turns are managed using a queue  
 
+**System Diagram:**  
+*(You can add a diagram image here if available)*  
 
+---
 
+## 3) UML Class Diagram
 
-
-
-
-```markdown
-3) UML class diagram:
 ```mermaid
 classDiagram
     class LinkedListT {
@@ -88,5 +86,11 @@ classDiagram
     LinkedListT --> Level : uses
     Level --> StackT : uses
     Player --> ArrayQueueT : uses
-
-4) Behavior UML Diagram (sequence)
+    
+    4) Behavior
+    sequenceDiagram
+    Player->>Level: enterLevel()
+    Level->>Enemy: spawnEnemies()
+    Player->>Enemy: attack()
+    Enemy-->>Player: damage()
+    Player-->>Level: completeTurn()
