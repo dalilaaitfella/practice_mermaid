@@ -86,11 +86,3 @@ classDiagram
     LinkedListT --> Level : uses
     Level --> StackT : uses
     Player --> ArrayQueueT : uses
-    
-    4) Behavior
-    sequenceDiagram
-    Player->>Level: enterLevel()
-    Level->>Enemy: spawnEnemies()
-    Player->>Enemy: attack()
-    Enemy-->>Player: damage()
-    Player-->>Level: completeTurn()
