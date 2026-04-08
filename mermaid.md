@@ -1,7 +1,38 @@
+1) Introduction: 
+
+-Purpose:
+This document explains how the Dungeon advenuture Game works and how it designed.
+
+-Scope:
+
+     .texted-based Dangeon Game.
+     .Player moves through 5 levels stored in a linked list.
+     .Players fight enemies using stack and Queue.
+     .Supports a party of player controlled characters.
+
+2) System Overview:
+ 
+ - Design Aproach
+     
+     . Levels stored in linked list.
+     . Enemies in each level stored in a stack.
+     .Players turns managed usin a Queue.
+
+     System diagram :
+
+
+
+
+
+
+
+
+3) UML class diagram:
+```mermaid
 classDiagram
-    class linkedlistType_T_ {
-        Node_T_* head
-        Node_T_* tail
+    class linkedlistType~T~ {
+        Node~T~* head
+        Node~T~* tail
         add(item)
         begin()
         end()
@@ -9,13 +40,13 @@ classDiagram
 
     class Level {
         string name
-        stack_Enemy_ enemies
+        stack<Enemy> enemies
         addEnemy()
         getEnemies()
         printLevel()
     }
 
-    class Stack_T_ {
+    class Stack~T~ {
         T* list
         int maxSize
         int topIndex
@@ -42,7 +73,7 @@ classDiagram
         getTAttack()
     }
 
-    class arrayQueue_T_ {
+    class arrayQueue~T~ {
         T** list
         int maxQueueSize
         int queueFront
@@ -53,6 +84,13 @@ classDiagram
         isEmptyQueue()
     }
 
-    linkedlistType_T_ --> Level : uses
-    Level --> Stack_T_ : uses
-    player --> arrayQueue_T_ : uses
+    linkedlistType~T~ --> Level : uses
+    Level --> Stack~T~ : uses
+    player --> arrayQueue~T~ : uses
+
+
+
+
+
+
+4) Behavior UML Diagram (sequence)
