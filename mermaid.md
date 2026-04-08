@@ -2,10 +2,10 @@
 
 ## 1) Introduction
 
-**Purpose:**  
+Purpose:  
 This document explains how the Dungeon Adventure Game works and how it is designed.
 
-**Scope:**  
+Scope:  
 - Text-based Dungeon Game  
 - Player moves through 5 levels stored in a linked list  
 - Players fight enemies using stack and queue  
@@ -15,13 +15,12 @@ This document explains how the Dungeon Adventure Game works and how it is design
 
 ## 2) System Overview
 
-**Design Approach:**  
+Design Approach:  
 - Levels are stored in a linked list  
 - Enemies in each level are stored in a stack  
 - Player turns are managed using a queue  
 
-**System Diagram:**  
-*(You can add a diagram image here if available)*  
+System Diagram:
 
 ---
 
@@ -73,7 +72,7 @@ classDiagram
     }
 
     class ArrayQueueT {
-        T** list
+        T list
         int maxQueueSize
         int queueFront
         int queueRear
