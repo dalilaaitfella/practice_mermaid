@@ -27,6 +27,7 @@ This document explains how the Dungeon advenuture Game works and how it designed
 
 
 
+```markdown
 3) UML class diagram:
 ```mermaid
 classDiagram
@@ -87,8 +88,5 @@ classDiagram
     LinkedListT --> Level : uses
     Level --> StackT : uses
     Player --> ArrayQueueT : uses
-
-
-
 
 4) Behavior UML Diagram (sequence)
