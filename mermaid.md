@@ -30,9 +30,9 @@ This document explains how the Dungeon advenuture Game works and how it designed
 3) UML class diagram:
 ```mermaid
 classDiagram
-    class linkedlistType~T~ {
-        Node~T~* head
-        Node~T~* tail
+    class LinkedListT {
+        Node* head
+        Node* tail
         add(item)
         begin()
         end()
@@ -46,7 +46,7 @@ classDiagram
         printLevel()
     }
 
-    class Stack~T~ {
+    class StackT {
         T* list
         int maxSize
         int topIndex
@@ -64,7 +64,7 @@ classDiagram
         getAttack()
     }
 
-    class player {
+    class Player {
         string type
         int hp
         int attack
@@ -73,7 +73,7 @@ classDiagram
         getTAttack()
     }
 
-    class arrayQueue~T~ {
+    class ArrayQueueT {
         T** list
         int maxQueueSize
         int queueFront
@@ -84,11 +84,9 @@ classDiagram
         isEmptyQueue()
     }
 
-    linkedlistType~T~ --> Level : uses
-    Level --> Stack~T~ : uses
-    player --> arrayQueue~T~ : uses
-
-
+    LinkedListT --> Level : uses
+    Level --> StackT : uses
+    Player --> ArrayQueueT : uses
 
 
 
